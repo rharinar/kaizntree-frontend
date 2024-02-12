@@ -16,6 +16,9 @@ import { DashboardTableComponent } from './components/dashboard-table/dashboard-
 import { MatSortModule} from '@angular/material/sort';
 import { MatTableModule} from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatSidenavModule,
     MatTableModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule,
+    MatSelectModule,
+    MatPaginatorModule
   ],
   bootstrap: [AppComponent],
 })

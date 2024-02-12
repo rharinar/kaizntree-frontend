@@ -32,8 +32,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class DashboardTableComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['select', 'sku', 'name', 'category', 'in_stock', 'available_stock'];
-  // 'tags',
+  displayedColumns: string[] = ['select', 'sku', 'name', 'tags', 'category', 'in_stock', 'available_stock'];
+
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
 
@@ -71,5 +71,5 @@ export class DashboardTableComponent implements AfterViewInit {
         this.selection.clear() :
         this.dataSource.data.forEach(row => this.selection.select(row));
   }
-  
+
 }
