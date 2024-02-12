@@ -19,6 +19,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatCheckboxModule,
     MatIconModule,
     MatSelectModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
 })
