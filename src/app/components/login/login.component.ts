@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,19 @@ export class LoginComponent {
 
   error: string | null = null; 
 
+  constructor(private router: Router) { 
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        console.log('Navigation started');
+      }
+  
+      if (event instanceof NavigationEnd) {
+        console.log('Navigation ended');
+      }
+    });
+  }
+ 
   submit() {
-    if (this.form.valid) {
-      
-    }
+    this.router.navigate(['dashboard']);
   }
 }
